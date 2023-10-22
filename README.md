@@ -5,7 +5,7 @@ This repository is something of my quant playground. It is a place to gather som
 
 ## What has been considered so far
 * Conway's game of life
-* Isling model
+* Ising model
 
 
 ## Upcoming projects
