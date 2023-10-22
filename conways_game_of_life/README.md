@@ -1,7 +1,7 @@
 # Conway's game of life
 Game of life is a cellular automaton (CA), meaning a grid of cells that can be in a finite number of states that is updated by application of some function iteratively.
 
-What makes game of life interesting I think are the fact that the CA is
+What makes game of life interesting is that it is
 * `Turing complete`: it is capable of implementing any algorithm.
 * a `self-replicating machine / universal constructor`: clusters of cells in the grid may reproduce autonomously based on their environment.
 

@@ -5,7 +5,7 @@ import matplotlib.animation as animation
 GRID_SIZE: int = 100
 ALIVE: int = 1
 DEAD: int = 0
-P_START_ALIVE: float = 0.2
+P_START_ALIVE: float = 0.25
 
 
 def forever_update(frame, img, grid, N):
