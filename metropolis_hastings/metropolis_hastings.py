@@ -8,12 +8,12 @@ class MetropolisHastings:
         state: float,
         target_pdf: Callable[..., float],
         proposal_pdf: Callable[..., float],
-        symmetric_poposal_pdf: bool = False,
+        proposal_pdf_is_symmetric: bool = False,
     ):
         self.state = state
         self.target_pdf = target_pdf
         self.proposal_pdf = proposal_pdf
-        self._symmetric_proposal_pdf = symmetric_poposal_pdf
+        self._symmetric_proposal_pdf = proposal_pdf_is_symmetric
         self._samples = [state]
         self._accepted = 0
 
@@ -54,7 +54,7 @@ class MetropolisHastings:
 
     def thinning(self, k: int):
         """Take every `k`th sample to reduce autocorrelation."""
-        self.samples = self.samples[::k]
+        self._samples = self._samples[::k]
 
     # TODO: Add visualisation as in https://exowanderer.medium.com/metropolis-hastings-mcmc-from-scratch-in-python-c21e53c485b7
     # with source code at https://github.com/exowanderer/medium_tutorials/blob/Bayesian/BayesianInference/MCMCFromScratch/MCMC_From_Scratch.ipynb
